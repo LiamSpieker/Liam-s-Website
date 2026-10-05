@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F0F6F6" />
+  <meta name="description" content="A photo collage made for the cover of the Dailyer. All made with real images that I took while hiding from awful college roommates." />
+  <title>Dailyer Collage — Liam Spieker</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" aria-label="Primary navigation">
+      <nav class="nav">
+        <a class="nav-link nav-art" href="../art.html" aria-current="location">art</a>
+        <a class="nav-link nav-blog" href="../blog.html">blog</a>
+
+        <a class="face-link" href="../who.html" aria-label="Who — Liam Spieker">
+          <img class="face-mark" src="../assets/liam-face.webp" alt="" />
+        </a>
+
+        <a class="nav-link nav-portfolio" href="../portfolio.html">portfolio</a>
+        <a class="nav-link nav-horoscope" href="../horoscope.html">your horoscope</a>
+      </nav>
+      <div class="rainbow-rule" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </header>
+
+    <main class="art-detail" id="main-content" aria-labelledby="work-title">
+  <a class="art-back" href="../art.html#september-cover">← Back to art</a>
+  <header class="art-description">
+    <p class="work-meta">Cover design · The DailyER · September 29, 2023</p>
+    <h1 id="work-title">Dailyer Collage</h1>
+    <p>A photo collage made for the cover of the Dailyer. All made with real images that I took while hiding from awful college roommates.</p>
+  </header>
+  <figure class="art-piece" style="aspect-ratio:719/720;"><img src="../assets/art/september.png" alt="The DailyER September 2023 cover, a collage of everyday objects" style="width:111.54381085%;max-width:none;left:-5.84144645%;top:-5.27777778%;" width="802" height="890" loading="eager" decoding="async"></figure>
+</main>
+
+    <div class="rainbow-rule rainbow-rule-bottom" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <script>
+    // Keep the page nearly static; only add a tiny physical response to the face mark.
+    const face = document.querySelector('.face-link');
+    face?.addEventListener('pointerenter', () => document.documentElement.classList.add('face-hover'));
+    face?.addEventListener('pointerleave', () => document.documentElement.classList.remove('face-hover'));
+  </script>
+</body>
+</html>

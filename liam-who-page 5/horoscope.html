@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F0F6F6" />
+  <meta name="description" content="Your horoscope — Liam Spieker." />
+  <title>Liam Spieker — Your horoscope</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" aria-label="Primary navigation">
+      <nav class="nav">
+        <a class="nav-link nav-art" href="art.html">art</a>
+        <a class="nav-link nav-blog" href="blog.html">blog</a>
+
+        <a class="face-link" href="who.html" aria-label="Who — Liam Spieker">
+          <img class="face-mark" src="assets/liam-face.webp" alt="" />
+        </a>
+
+        <a class="nav-link nav-portfolio" href="portfolio.html">portfolio</a>
+        <a class="nav-link nav-horoscope" href="horoscope.html" aria-current="page">your horoscope</a>
+      </nav>
+      <div class="rainbow-rule" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </header>
+
+    <main class="section-page horoscope-page" id="main-content" aria-labelledby="page-title">
+      <div class="horoscope-content">
+        <header class="horoscope-heading">
+          <h1 id="page-title">your horoscope</h1>
+          <p class="horoscope-byline">Liam Spieker, <em>divine entity</em></p>
+        </header>
+        <div class="sign-picker">
+          <label for="zodiac-sign">Choose your sign</label>
+          <select id="zodiac-sign" aria-controls="forecast">
+            <option value="Aries">Aries</option>
+            <option value="Taurus">Taurus</option>
+            <option value="Gemini">Gemini</option>
+            <option value="Cancer">Cancer</option>
+            <option value="Leo">Leo</option>
+            <option value="Virgo">Virgo</option>
+            <option value="Libra">Libra</option>
+            <option value="Scorpio">Scorpio</option>
+            <option value="Sagittarius">Sagittarius</option>
+            <option value="Capricorn">Capricorn</option>
+            <option value="Aquarius">Aquarius</option>
+            <option value="Pisces">Pisces</option>
+          </select>
+        </div>
+        <section id="forecast" class="forecast" aria-live="polite" aria-atomic="true" aria-labelledby="forecast-sign">
+          <h2 id="forecast-sign"></h2>
+          <p id="forecast-dates" class="forecast-dates"></p>
+          <p id="forecast-text" class="forecast-text"></p>
+        </section>
+        <noscript><p>Enable JavaScript to choose your sign and read your horoscope.</p></noscript>
+      </div>
+    </main>
+
+    <div class="rainbow-rule rainbow-rule-bottom" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <script>
+    // Keep the page nearly static; only add a tiny physical response to the face mark.
+    const face = document.querySelector('.face-link');
+    face?.addEventListener('pointerenter', () => document.documentElement.classList.add('face-hover'));
+    face?.addEventListener('pointerleave', () => document.documentElement.classList.remove('face-hover'));
+  </script>
+  <script src="horoscopes-data.js"></script>
+  <script src="horoscopes.js"></script>
+</body>
+</html>

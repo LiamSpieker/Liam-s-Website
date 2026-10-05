@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#F0F6F6" />
+  <meta name="description" content="Art — Liam Spieker." />
+  <title>Liam Spieker — Art</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header" aria-label="Primary navigation">
+      <nav class="nav">
+        <a class="nav-link nav-art" href="art.html" aria-current="page">art</a>
+        <a class="nav-link nav-blog" href="blog.html">blog</a>
+
+        <a class="face-link" href="who.html" aria-label="Who — Liam Spieker">
+          <img class="face-mark" src="assets/liam-face.webp" alt="" />
+        </a>
+
+        <a class="nav-link nav-portfolio" href="portfolio.html">portfolio</a>
+        <a class="nav-link nav-horoscope" href="horoscope.html">your horoscope</a>
+      </nav>
+      <div class="rainbow-rule" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+    </header>
+
+    <main class="art-gallery" id="main-content" aria-label="Selected artwork">
+<a class="art-work-link" id="herbs-mid-life-crisis" href="art/herbs-mid-life-crisis.html" aria-label="View Herb&#x27;s Midlife Crisis and description"><figure class="art-piece" style="aspect-ratio:890/1106;"><img src="assets/art/herbie.png" alt="Herb’s Mid-Life Crisis illustration in Nebraska Quarterly" style="width:100.00000000%;max-width:none;left:0.00000000%;top:0.00000000%;" width="890" height="1106" loading="eager" decoding="async"></figure></a>
+<a class="art-work-link" id="poor" href="art/poor.html" aria-label="View Poor? and description"><figure class="art-piece" style="aspect-ratio:720/722;"><img src="assets/art/poor.png" alt="The DailyER cover: Poor?" style="width:111.38888889%;max-width:none;left:-5.41666667%;top:-5.26315789%;" width="802" height="890" loading="lazy" decoding="async"></figure></a>
+<a class="art-work-link" id="childrens-edition" href="art/childrens-edition.html" aria-label="View Children&#x27;s edition and description"><figure class="art-piece" style="aspect-ratio:720/722;"><img src="assets/art/childrens-edition.png" alt="The DailyER Children’s Edition cover" style="width:112.22222222%;max-width:none;left:-5.97222222%;top:-5.26315789%;" width="808" height="936" loading="lazy" decoding="async"></figure></a>
+<a class="art-work-link" id="september-cover" href="art/september-cover.html" aria-label="View Dailyer Collage and description"><figure class="art-piece" style="aspect-ratio:719/720;"><img src="assets/art/september.png" alt="The DailyER September 2023 cover, a collage of everyday objects" style="width:111.54381085%;max-width:none;left:-5.84144645%;top:-5.27777778%;" width="802" height="890" loading="lazy" decoding="async"></figure></a>
+<a class="art-work-link" id="holiday-edition" href="art/holiday-edition.html" aria-label="View The Dailyer&#x27;s Elf on the Shelf and description"><figure class="art-piece" style="aspect-ratio:720/723;"><img src="assets/art/holiday.png" alt="The DailyER Holiday Edition cover: Elf on the Shelf" style="width:112.50000000%;max-width:none;left:-6.25000000%;top:-4.14937759%;" width="810" height="928" loading="lazy" decoding="async"></figure></a>
+<a class="art-work-link" id="healing" href="art/healing.html" aria-label="View Healing over concealing and description"><figure class="art-piece" style="aspect-ratio:1172/800"><img src="assets/portfolio-pages/page-20.webp" alt="Healing mural design in a shared seating area" style="width:153.58361775%;max-width:none;left:-24.48805461%;top:-38.62500000%;" width="1800" height="1273" loading="lazy" decoding="async"></figure></a>
+</main>
+
+    <div class="rainbow-rule rainbow-rule-bottom" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <script>
+    // Keep the page nearly static; only add a tiny physical response to the face mark.
+    const face = document.querySelector('.face-link');
+    face?.addEventListener('pointerenter', () => document.documentElement.classList.add('face-hover'));
+    face?.addEventListener('pointerleave', () => document.documentElement.classList.remove('face-hover'));
+  </script>
+</body>
+</html>
